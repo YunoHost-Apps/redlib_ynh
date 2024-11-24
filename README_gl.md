@@ -5,7 +5,9 @@ NON debe editarse manualmente.
 
 # Redlib para YunoHost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/redlib.svg)](https://ci-apps.yunohost.org/ci/apps/redlib/) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/redlib.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/redlib.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/redlib)](https://ci-apps.yunohost.org/ci/apps/redlib/)
+![Estado de funcionamento](https://apps.yunohost.org/badge/state/redlib)
+![Estado de mantemento](https://apps.yunohost.org/badge/maintained/redlib)
 
 [![Instalar Redlib con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=redlib)
 

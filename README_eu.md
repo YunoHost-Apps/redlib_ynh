@@ -5,7 +5,9 @@ EZ editatu eskuz.
 
 # Redlib YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/redlib.svg)](https://ci-apps.yunohost.org/ci/apps/redlib/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/redlib.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/redlib.maintain.svg)
+[![Integrazio maila](https://apps.yunohost.org/badge/integration/redlib)](https://ci-apps.yunohost.org/ci/apps/redlib/)
+![Funtzionamendu egoera](https://apps.yunohost.org/badge/state/redlib)
+![Mantentze egoera](https://apps.yunohost.org/badge/maintained/redlib)
 
 [![Instalatu Redlib YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=redlib)
 

@@ -5,7 +5,9 @@ Ini TIDAK boleh diedit dengan tangan.
 
 # Redlib untuk YunoHost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/redlib.svg)](https://ci-apps.yunohost.org/ci/apps/redlib/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/redlib.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/redlib.maintain.svg)
+[![Tingkat integrasi](https://apps.yunohost.org/badge/integration/redlib)](https://ci-apps.yunohost.org/ci/apps/redlib/)
+![Status kerja](https://apps.yunohost.org/badge/state/redlib)
+![Status pemeliharaan](https://apps.yunohost.org/badge/maintained/redlib)
 
 [![Pasang Redlib dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=redlib)
 

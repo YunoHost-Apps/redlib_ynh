@@ -1,5 +1,6 @@
 [Unit]
 Description=Redlib: alternative to Reddit
+Before=nginx.service
 After=network.service
 
 [Service]

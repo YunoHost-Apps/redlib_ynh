@@ -5,7 +5,9 @@
 
 # YunoHost 上的 Redlib
 
-[![集成程度](https://dash.yunohost.org/integration/redlib.svg)](https://ci-apps.yunohost.org/ci/apps/redlib/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/redlib.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/redlib.maintain.svg)
+[![集成程度](https://apps.yunohost.org/badge/integration/redlib)](https://ci-apps.yunohost.org/ci/apps/redlib/)
+![工作状态](https://apps.yunohost.org/badge/state/redlib)
+![维护状态](https://apps.yunohost.org/badge/maintained/redlib)
 
 [![使用 YunoHost 安装 Redlib](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=redlib)
 
@@ -26,7 +28,7 @@ Redlib is an alternative private front-end to Reddit, with its origins in Libred
 - Strong Content Security Policy prevents browser requests to Reddit
 
 
-**分发版本：** 0.35.1~ynh4
+**分发版本：** 0.35.1~ynh5
 
 ## 截图
 

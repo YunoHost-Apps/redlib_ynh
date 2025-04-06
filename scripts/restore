@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#=================================================
+# IMPORT GENERIC HELPERS
+#=================================================
+
+# Keep this path for calling _common.sh inside the execution's context of backup and restore scripts
 source ../settings/scripts/_common.sh
 source /usr/share/yunohost/helpers
 
@@ -11,25 +16,22 @@ ynh_script_progression "Restoring the app main directory..."
 ynh_restore "$install_dir"
 
 #=================================================
-# RESTORE SYSTEM CONFIGURATIONS
+# RESTORE SYSTEM CONFIGURATION
 #=================================================
 ynh_script_progression "Restoring system configurations related to $app..."
 
 ynh_restore "/etc/nginx/conf.d/$domain.d/$app.conf"
 
 ynh_restore "/etc/systemd/system/$app.service"
-systemctl enable $app.service --quiet
-
-yunohost service add $app --description="Alternative to Reddit" --log="/var/log/$app/$app.log"
-
-ynh_systemctl  --action="start" --log_path="systemd"
+systemctl enable "$app.service" --quiet
+yunohost service add "$app" --description="Alternative to Reddit" --log="systemd"
 
 #=================================================
 # RELOAD NGINX AND PHP-FPM OR THE APP SERVICE
 #=================================================
 ynh_script_progression "Reloading NGINX web server and $app's service..."
 
-ynh_systemctl  --action="start" --log_path="systemd"
+ynh_systemctl --service="$app" --action="start" --wait_until="Running Redlib" --log_path="systemd"
 
 ynh_systemctl --service=nginx --action=reload
 

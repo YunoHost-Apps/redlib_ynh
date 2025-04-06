@@ -1,3 +1,5 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json
+
 packaging_format = 2
 
 id = "redlib"
@@ -5,7 +7,7 @@ name = "Redlib"
 description.en = "Libre alternative to Reddit"
 description.fr = "Alternative libre à Reddit"
 
-version = "0.35.1~ynh5"
+version = "0.36.0~ynh1"
 
 maintainers = []
 
@@ -20,6 +22,7 @@ architectures = ["amd64"]
 multi_instance = true
 
 ldap = false
+
 sso = false
 
 disk = "50M"
@@ -36,20 +39,21 @@ ram.runtime = "50M"
 
 [resources]
 
-    [resources.sources]
-        [resources.sources.main]
-        url = "https://github.com/redlib-org/redlib/releases/download/v0.35.1/redlib"
-        sha256 = "795222c0a368d893310996186527372aedf280a343cf699b3d2cc753c5991131"
-        extract = false
-        in_subdir = false
-        rename = "redlib"
-        #autoupdate.strategy = "latest_github_tag"
+    [resources.sources.main]
+    amd64.url = "https://github.com/redlib-org/redlib/releases/download/v0.36.0/redlib-x86_64-unknown-linux-musl.tar.gz"
+    amd64.sha256 = "22c3af94df9be1c326217b56d97b88c945bd129c457a68e286c904cd663e9c45"
+    armhf.url = "https://github.com/redlib-org/redlib/releases/download/v0.36.0/redlib-armv7-unknown-linux-musleabihf.tar.gz"
+    armhf.sha256 = "a03f08f46e68d80bc98b0d5c3e7065590d9da2790ec75a49aafb12adc1e19d58"
+    arm64.url = "https://github.com/redlib-org/redlib/releases/download/v0.36.0/redlib-aarch64-unknown-linux-musl.tar.gz"
+    arm64.sha256 = "ce8cc2fdc2f1e8defc7dac3f25bfb65c44bf7db0f4fcd2b7f8b2eaf144d67a32"
+    in_subdir = false
+    autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
 
     [resources.install_dir]
 
-    [resources.ports]
-
     [resources.permissions]
     main.url = "/"
+
+    [resources.ports]

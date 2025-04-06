@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#=================================================
+# IMPORT GENERIC HELPERS
+#=================================================
+
 source _common.sh
 source /usr/share/yunohost/helpers
 
@@ -8,44 +12,44 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Stopping $app's systemd service..."
 
-ynh_systemctl  --action="stop" --log_path="systemd"
+ynh_systemctl --service="$app" --action="stop" --log_path="systemd"
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 ynh_script_progression "Upgrading source files..."
 
-ynh_setup_source --dest_dir="$install_dir" --keep="redlib.conf" --full_replace
+# Download, check integrity, uncompress and patch the source from manifest.toml
+ynh_setup_source --dest_dir="$install_dir" --full_replace --keep="redlib.conf"
 
 chmod +x $install_dir/redlib
 
 #=================================================
-# REAPPLY SYSTEM CONFIGURATIONS
+# UPDATE A CONFIG FILE
+#=================================================
+ynh_script_progression "Updating $app's configuration files..."
+
+ynh_config_add --template="redlib.conf" --destination="$install_dir/redlib.conf"
+
+chmod 400 "$install_dir/redlib.conf"
+chown "$app:$app" "$install_dir/redlib.conf"
+
+#=================================================
+# REAPPLY SYSTEM CONFIGURATION
 #=================================================
 ynh_script_progression "Upgrading system configurations related to $app..."
 
 ynh_config_add_nginx
 
 ynh_config_add_systemd
-
-yunohost service add $app --description="Alternative to Reddit" --log="/var/log/$app/$app.log"
-
-#=================================================
-# UPDATE A CONFIG FILE
-#=================================================
-#ynh_script_progression "Updating configuration..."
-
-#ynh_config_add --template="redlib.conf" --destination="$install_dir/redlib.conf"
-
-#chmod 400 "$install_dir/redlib.conf"
-#chown $app:$app "$install_dir/redlib.conf"
+yunohost service add "$app" --description="Alternative to Reddit" --log="systemd"
 
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
 ynh_script_progression "Starting $app's systemd service..."
 
-ynh_systemctl  --action="start" --log_path="systemd"
+ynh_systemctl --service="$app" --action="start" --wait_until="Running Redlib" --log_path="systemd"
 
 #=================================================
 # END OF SCRIPT

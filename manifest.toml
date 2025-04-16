@@ -47,7 +47,11 @@ ram.runtime = "50M"
     arm64.url = "https://github.com/redlib-org/redlib/releases/download/v0.36.0/redlib-aarch64-unknown-linux-musl.tar.gz"
     arm64.sha256 = "ce8cc2fdc2f1e8defc7dac3f25bfb65c44bf7db0f4fcd2b7f8b2eaf144d67a32"
     in_subdir = false
-    autoupdate.strategy = "latest_github_tag"
+
+    autoupdate.strategy = "latest_github_release"
+    autoupdate.asset.amd64 = "redlib-x86_64-.*.tar.gz"
+    autoupdate.asset.armhf = "redlib-armv7-.*.tar.gz"
+    autoupdate.asset.arm64 = "redlib-aarch64-.*.tar.gz"
 
     [resources.system_user]
 

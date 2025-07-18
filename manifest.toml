@@ -7,7 +7,7 @@ name = "Redlib"
 description.en = "Libre alternative to Reddit"
 description.fr = "Alternative libre à Reddit"
 
-version = "0.36.0~ynh3"
+version = "0.36.0~ynh4"
 
 maintainers = []
 
@@ -41,11 +41,11 @@ ram.runtime = "50M"
 
     [resources.sources.main]
     amd64.url = "https://github.com/redlib-org/redlib/releases/download/v0.36.0/redlib-x86_64-unknown-linux-musl.tar.gz"
-    amd64.sha256 = "517d1160f5d75dc0394569d0f260e48e2ce09262f406f1edac8bf03d0c0e5e0e"
+    amd64.sha256 = "bc9f0e67aaa3437c145eeae8c105591af81fc6631892f2c3df344ed445e78de7"
     armhf.url = "https://github.com/redlib-org/redlib/releases/download/v0.36.0/redlib-armv7-unknown-linux-musleabihf.tar.gz"
-    armhf.sha256 = "7609478cc6f1ed19e93568952d3c06d751e5a06d98e736b0c3f03fa9770a99bc"
+    armhf.sha256 = "3692c0353560fdd15a85399fb87139cc0d93a0d6464ce49763b880b9b4cd87c8"
     arm64.url = "https://github.com/redlib-org/redlib/releases/download/v0.36.0/redlib-aarch64-unknown-linux-musl.tar.gz"
-    arm64.sha256 = "ba6541d4a9fa10e15d90ffcbd6c3c71be2b3e9fdf909d186bb6068004139626d"
+    arm64.sha256 = "2c09e0e380881e0a456420f1c9a739966042696189191c5357ec99557f1e7d67"
     in_subdir = false
 
     autoupdate.strategy = "latest_github_release"

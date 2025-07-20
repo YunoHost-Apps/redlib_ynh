@@ -7,7 +7,7 @@ name = "Redlib"
 description.en = "Libre alternative to Reddit"
 description.fr = "Alternative libre à Reddit"
 
-version = "0.36.0~ynh4"
+version = "0.36.0~ynh5"
 
 maintainers = []
 
@@ -18,11 +18,10 @@ code = "https://github.com/redlib-org/redlib"
 [integration]
 yunohost = ">= 12.0.9"
 helpers_version = "2.1"
-architectures = ["amd64"]
+architectures = ["amd64", "arm64", "armhf"]
 multi_instance = true
 
 ldap = false
-
 sso = false
 
 disk = "50M"
@@ -41,11 +40,11 @@ ram.runtime = "50M"
 
     [resources.sources.main]
     amd64.url = "https://github.com/redlib-org/redlib/releases/download/v0.36.0/redlib-x86_64-unknown-linux-musl.tar.gz"
-    amd64.sha256 = "bc9f0e67aaa3437c145eeae8c105591af81fc6631892f2c3df344ed445e78de7"
+    amd64.sha256 = "6f3c77f2a9e878dcd96c3ca6d02abb974e8ff52926665413e04a21d1a45a64e2"
     armhf.url = "https://github.com/redlib-org/redlib/releases/download/v0.36.0/redlib-armv7-unknown-linux-musleabihf.tar.gz"
-    armhf.sha256 = "3692c0353560fdd15a85399fb87139cc0d93a0d6464ce49763b880b9b4cd87c8"
+    armhf.sha256 = "9156c1972105b3cde6cb302b4ce1396d64203471b15f1442b9fad6e905e9be80"
     arm64.url = "https://github.com/redlib-org/redlib/releases/download/v0.36.0/redlib-aarch64-unknown-linux-musl.tar.gz"
-    arm64.sha256 = "2c09e0e380881e0a456420f1c9a739966042696189191c5357ec99557f1e7d67"
+    arm64.sha256 = "d6950a3d8e4e5ac6f1381f5e6e0fba0b3c7d9b2f299d8869295424e8347e2774"
     in_subdir = false
 
     autoupdate.strategy = "latest_github_release"

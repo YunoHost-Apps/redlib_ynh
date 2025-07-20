@@ -10,7 +10,7 @@ It shall NOT be edited by hand.
 
 Libre alternative to Reddit
 
-[![Version: 0.36.0~ynh4](https://img.shields.io/badge/Version-0.36.0~ynh4-rgba(0,150,0,1)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/redlib/)
+[![Version: 0.36.0~ynh5](https://img.shields.io/badge/Version-0.36.0~ynh5-rgba(0,150,0,1)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/redlib/)
 
 <div align="center">
 <a href="https://apps.yunohost.org/app/redlib"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>

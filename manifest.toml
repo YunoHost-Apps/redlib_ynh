@@ -40,11 +40,11 @@ ram.runtime = "50M"
 
     [resources.sources.main]
     amd64.url = "https://github.com/redlib-org/redlib/releases/download/v0.36.0/redlib-x86_64-unknown-linux-musl.tar.gz"
-    amd64.sha256 = "6f3c77f2a9e878dcd96c3ca6d02abb974e8ff52926665413e04a21d1a45a64e2"
+    amd64.sha256 = "37ebdbdf5ed08b0e04d9c0ae3ce0d7853859da3c1d2bd34fb2068a88bc4c7a9e"
     armhf.url = "https://github.com/redlib-org/redlib/releases/download/v0.36.0/redlib-armv7-unknown-linux-musleabihf.tar.gz"
-    armhf.sha256 = "9156c1972105b3cde6cb302b4ce1396d64203471b15f1442b9fad6e905e9be80"
+    armhf.sha256 = "0fb0f3588a2b9cf625e9baf55deaf9a56e448f98f800dee8ddf7d5dbdedca98d"
     arm64.url = "https://github.com/redlib-org/redlib/releases/download/v0.36.0/redlib-aarch64-unknown-linux-musl.tar.gz"
-    arm64.sha256 = "d6950a3d8e4e5ac6f1381f5e6e0fba0b3c7d9b2f299d8869295424e8347e2774"
+    arm64.sha256 = "e4c1f23fac5486ae0c30c2e2f6f1ca8bb02b24e7350200b32ec6e9858e95db68"
     in_subdir = false
 
     autoupdate.strategy = "latest_github_release"
